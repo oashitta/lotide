@@ -13,7 +13,7 @@ const assertEqual = function(actual, expected) {
 
 const countOnly = function (allItems, itemsToCount){
   const results = {};
-
+  console.log(itemsToCount)
   for (const item of allItems){
     // to count all.
     // if (results[item]){
@@ -21,15 +21,20 @@ const countOnly = function (allItems, itemsToCount){
     // }else {
     //   results[item] = 1;
     // }
-
+    console.log("result:", results)
+    console.log("item:", item )
     if (itemsToCount[item]) { 
+      console.log("item",item," is inside itemsToCount")
       if (results[item]) {
+        console.log("item already in results")
         results[item] += 1;
       } else {
+        console.log("item not yet in results")
         results[item] = 1;
       }
     }
   }
+  console.log(results)
   return results;
 };
 
