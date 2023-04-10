@@ -1,24 +1,6 @@
-const eqArrays = function(arr1, arr2) {
-  // compare length of arrays
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  // compare content of arrays
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
+const eqArrays = require('./eqArrays');
+const assertArraysEqual = require('./assertArraysEqual');
 
-const assertArraysEqual = function(arr1, arr2) {
-  if (eqArrays(arr1, arr2)) {
-    console.log(`✅✅✅ Assertion Passed: ${arr1} === ${arr2}`);
-  } else {
-    console.log(`❌❌❌ Assertion failed: ${arr1} !== ${arr2}`);
-  }
-};
 
 // create a middle function
 // function should take in an array
@@ -46,10 +28,4 @@ const middle = function(array) {
   return middleElements;
 };
 
-console.log(assertArraysEqual(middle([8, 9, 10, 11, 12, 13, 14]), [11]));
-console.log(assertArraysEqual(middle([1, 2, 3, 4, 5, 6]),[3,4]));
-console.log(assertArraysEqual(middle([]), []));
-console.log(assertArraysEqual(middle([1]), []));
-console.log(assertArraysEqual(middle([1, 2]), []));
-console.log(assertArraysEqual(middle(['a', 'b', 'c', 'd', 'e', 'f']), ['c','d']));
-
+module.exports = middle;
