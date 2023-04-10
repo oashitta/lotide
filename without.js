@@ -1,25 +1,5 @@
-const eqArrays = function (arr1, arr2){
-  // compare length of arrays
-  if(arr1.length !== arr2.length){
-    return false;
-  }
-  // compare content of arrays
-  for(let i = 0; i < arr1.length; i++){
-    if (arr1[i] !== arr2[i]){
-      return false;
-  }
-};
-return true;
-};
-
-
-const assertArraysEqual = function(arr1, arr2){
-  if (eqArrays(arr1, arr2)){
-    console.log(`✅✅✅ Assertion Passed: ${arr1} === ${arr2}`)
-  }else {
-    console.log(`❌❌❌ Assertion failed: ${arr1} !== ${arr2}`);
-  }
-}
+const eqArrays = require('./eqArrays');
+const assertArraysEqual = require('./assertArraysEqual');
 
 const without = function(source, itemsToRemove){
   // array to store filtered elements
@@ -43,7 +23,7 @@ const without = function(source, itemsToRemove){
 
 console.log(without([1,2,3,4,5], [1,5]))
 
-
+module.exports = without;
 
 
 

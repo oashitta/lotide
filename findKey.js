@@ -1,11 +1,5 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌❌❌ Assertion failed: ${actual} !=== ${expected}`);
-    // console.log("❌❌❌ Assertion failed: " + actual + " !=== " + expected);
-  }
-};
+const assertEqual = require('./assertEqual')
+
 // take obj and cb
 const findKey = function (obj, cb){
   // scan obj and return 1st key for which the cb returns a truthy value
@@ -39,3 +33,8 @@ const students = {
 
 console.log(assertEqual(findKey(students, x => x === 19), "jane")) 
 console.log(assertEqual(findKey(students, x => x === 44), "jane")) 
+
+
+
+
+module.exports = findKey;

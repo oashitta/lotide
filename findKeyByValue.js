@@ -1,10 +1,4 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌❌❌ Assertion failed: ${actual} !=== ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual')
 
 // function should scan object and return first key that contains given value
 // function should return undefined if no given value is found. 
@@ -49,3 +43,5 @@ assertEqual(findKeyByValue(fruitColors, "yellow"), "banana");
 assertEqual(findKeyByValue(fruitColors, "blue"), undefined);
 assertEqual(findKeyByValue(fruitColors, "orange"), "oranges");
 assertEqual(findKeyByValue(fruitColors, "orange"), "tangerine"); // expect assertion to fail. 
+
+module.exports = findKeyByValue;
