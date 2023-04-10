@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@oashitta/lotide",
+  "version": "1.0.1",
+  "description": "an npm package with javascript utility functions. More details in the README.md",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"

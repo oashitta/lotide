@@ -7,7 +7,7 @@ const countLetters = function (sentence){
   // loop through the string
   for(let letter of sentence.toLowerCase()){
     
-    console.log(letter);
+    // console.log(letter);
     // count the letters and add the number to output.
     // if ( letter !== " " ){
       if (!output[letter]){
