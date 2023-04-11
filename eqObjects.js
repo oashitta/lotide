@@ -60,3 +60,5 @@ console.log(assertEqual(eqObjects(multiColorShirtObject  , longSleeveMultiColorS
 //   }
 // }
 // return false;
+
+module.exports = eqObjects;
